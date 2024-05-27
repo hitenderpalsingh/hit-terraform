@@ -1,4 +1,8 @@
 bucket/.terraform/*
 VPC-Firewall-Instance/.terraform/*
 random_provider/.terraform/*
+<<<<<<< HEAD
 VPC-Firewall-Multiple-Instance/.terraform/*
+=======
+*/.terraform/*
+>>>>>>> b399ca4 (26thmay-2)
