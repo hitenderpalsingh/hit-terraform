@@ -1,8 +1,10 @@
 bucket/.terraform/*
+bucket/terraform.tfstate*
 VPC-Firewall-Instance/.terraform/*
+VPC-Firewall-Instance/terraform.tfstate*
 random_provider/.terraform/*
-VPC-Firewall-Multiple-Instance/.terraform/*
-*/.terraform/*
-.terraform/
+random_provider/terraform.tfstate*
 VPC-Firewall-Multiple-Instance/.terraform/
+VPC-Firewall-Multiple-Instance/terraform.tfstate*
 VPC-Firewall-Multiple-Instance-Zones/.terraform/
+VPC-Firewall-Multiple-Instance-Zones/terraform.tfstate*
