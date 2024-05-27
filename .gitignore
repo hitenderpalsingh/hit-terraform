@@ -5,3 +5,4 @@ VPC-Firewall-Multiple-Instance/.terraform/*
 */.terraform/*
 .terraform/
 VPC-Firewall-Multiple-Instance/.terraform/
+VPC-Firewall-Multiple-Instance-Zones/.terraform/
