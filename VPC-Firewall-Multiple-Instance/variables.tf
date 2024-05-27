@@ -32,17 +32,23 @@ variable "vm_instance_name" {
 
 #variable "vm_zone" {
 #  type    = string
- # type    = list(string)
- # default = ["asia-south2-a", "asia-south2-b", "aisa-south2-c"]
+# type    = list(string)
+# default = ["asia-south2-a", "asia-south2-b", "aisa-south2-c"]
 #   default = "aisa-south2-a"
 #}
 variable "vm_zone" {
-	type	= string
-	default	= "asia-south2-a"
+  type    = string
+  default = "asia-south2-a"
 }
 variable "vm_machine_type" {
   type    = string
   default = "e2-micro"
+}
+
+variable "vm_instance_count" {
+  description = "Number of VM instances to create"
+  type        = number
+  default     = 2
 }
 
 #######################################

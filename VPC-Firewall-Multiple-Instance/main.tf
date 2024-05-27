@@ -17,11 +17,13 @@ resource "google_compute_subnetwork" "my_subnet" {
 }
 
 resource "google_compute_instance" "my-instance" {
-  name         = var.vm_instance_name
-  machine_type = var.vm_machine_type
-  zone         = var.vm_zone
+  count = var.vm_instance_count
+  name  = "${var.vm_instance_name}-${count.index + 1}"
+  # name                = var.vm_instance_name
+  machine_type        = var.vm_machine_type
+  zone                = var.vm_zone
   deletion_protection = false
-  
+
   network_interface {
     network    = google_compute_network.my_network.self_link
     subnetwork = google_compute_subnetwork.my_subnet.self_link
@@ -32,7 +34,7 @@ resource "google_compute_instance" "my-instance" {
       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20240415"
     }
   }
-   metadata_startup_script =  "sudo apt-get update; sudo apt-get install -y nginx; sudo systemctl start nginx"      // renderning script from template file
+  metadata_startup_script = "sudo apt-get update; sudo apt-get install -y nginx; sudo systemctl start nginx" // renderning script from template file
 
   depends_on = [google_compute_network.my_network, google_compute_subnetwork.my_subnet]
 }

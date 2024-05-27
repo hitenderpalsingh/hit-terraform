@@ -6,9 +6,9 @@ resource "google_compute_firewall" "my-network-allow" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "8080", "443","22"]
+    ports    = ["80", "8080", "443", "22"]
   }
 
-  source_tags = ["http-https-server"]
+  source_tags   = ["http-https-server"]
   source_ranges = ["0.0.0.0/0"]
 }
