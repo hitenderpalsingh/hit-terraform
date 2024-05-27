@@ -3,3 +3,5 @@ VPC-Firewall-Instance/.terraform/*
 random_provider/.terraform/*
 VPC-Firewall-Multiple-Instance/.terraform/*
 */.terraform/*
+.terraform/
+VPC-Firewall-Multiple-Instance/.terraform/
